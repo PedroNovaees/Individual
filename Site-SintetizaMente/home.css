@@ -1,0 +1,189 @@
+body {
+    margin: 0%;
+    padding: 0%;
+}
+
+/* div mae para conter o body inteiro */
+.mae {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    width: 100%;
+    background-color: #BF604B;
+    
+}
+
+/* Espaço Home */
+
+.nav {
+    width: 100%;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-top: 15px;
+    margin-bottom: 3% ;
+   height: 100px;
+}
+
+
+/* Conteúdo do Site */
+
+.corpoHome{
+    width: 100%;
+    height: 100%;
+}
+
+.sobre,
+.proposta,
+.contato {
+    cursor: pointer;
+    transition: border-color 0.4s;
+    border-bottom: 2px solid transparent;
+}
+
+
+.sobre:hover,
+.proposta:hover,
+.contato:hover {
+    cursor: pointer;
+    transition: 0.4s;
+    border-bottom: 2px solid white;
+
+}
+
+
+.Textonav {
+    font-size: large;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 30%;
+    margin-left: 48%;
+
+}
+
+
+.logo {
+
+    width: 6.5%;
+    margin-left: 10%;
+
+}
+
+/* texto do corpo home */
+
+.conteudoHome {
+    width: 100%;
+    height: 555px;
+    color: white;
+    position: relative;/* Define position relative para os elementos filhos */
+    z-index: 1;/* Define um z-index maior para que o conteúdo fique na frente da imagem */
+}
+
+
+.bemVindo{
+    width: 12%;
+    font-weight: 250;
+    margin-left: 15%; 
+    height: 20px;
+}
+
+
+.sintonizaMente {
+    font-size: 80px;
+    width: 44%;
+    height: 100px;
+
+}
+
+.textoSintetize{
+    width: 55%;   
+    height: 100px;
+}
+
+.textoCorpo {
+    font-size: x-large;
+    margin-left: 50px;
+}
+
+
+.e,
+.mente {
+    color: #FFC1B3;
+    font-weight: bold;
+}
+
+.p {
+    color: #F2CEA2;
+}
+
+
+.meninaimg {
+    position: absolute;
+    top: 111px;
+    left: 800px;
+    width: 40%; /* ajusta o tamanho caso sair pra fora da tela  */
+    height: 100%;
+    z-index: 0; /* Define um z-index menor para que a imagem fique na frente da cor de fundo */
+}
+
+
+.imagemFundo {
+    width: 95%;
+    height: 85%;
+    object-fit: cover;
+    margin-top: -6.9px;
+    margin-left: 142px ;
+}
+
+
+.button {
+    margin-top: 90px ;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+    height: 70px;
+    color: white;
+    transition: 0.5s;
+    border: solid 2px white;
+    text-decoration: none;
+    margin-left: 27%;
+}
+
+.button:hover {
+    background-color: #ffffff;
+    color: #BF604B;
+    transition: 0.5s;
+    border: none;
+}
+
+
+/* Espaço Sobre o Projeto */
+
+.corpoSP{
+    width:100%;
+    height: 737px;
+    background-color: #F2CEA2;
+}
+
+/* Espaço Contato/Footer */
+
+.corpoFooter{
+
+    width:100%;
+    height: 737px;
+    background-color: #EF9188;
+}
+
+.tituloFooter{
+    display: flex;
+}

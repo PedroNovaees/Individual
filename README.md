@@ -1,1 +1,2 @@
-# Individual
+# Projeto - SintetizaMente
+
