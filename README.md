@@ -10,20 +10,14 @@ Bem-vindo ao SintonizaMente, seu portal para explorar como a música pode transf
 
 ![alt text](image.png)
 
-![alt text](image-1.png)
+![alt text](<Montagem README/image-1.png>)
 
-![alt text](image-2.png)
+![alt text](<Montagem README/image-2.png>)
 
-![alt text](image-3.png)
+![alt text](<Montagem README/image-3.png>)
 
 
 
    Tecnologias - ⚙ 
 
-![alt text](<Montagem README/icons8-css-48.png>)
-
-![alt text](<Montagem README/icons8-html-48.png>)
-
-![alt text](<Montagem README/icons8-js-48.png>)
-
-![alt text](<Montagem README/icons8-mysql-48.png>)
+![alt text](<Montagem README/icons8-css-48.png>) ![alt text](<Montagem README/icons8-html-48.png>) ![alt text](<Montagem README/icons8-js-48.png>) ![alt text](<Montagem README/icons8-mysql-48.png>)
