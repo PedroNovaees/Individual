@@ -1,4 +1,4 @@
-![alt text](Site-SintetizaMente/imgs/soundwaves.png)
+
 
 SintetizaMente - 🎻
 
