@@ -1,7 +1,19 @@
-body {
-    margin: 0%;
-    padding: 0%;
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
+a {
+    color: inherit;
+    /* Herda a cor do texto do elemento pai */
+    text-decoration: none;
+    /* Remove o sublinhado padrão */
+}
+
+
+
 
 /* div mae para conter o body inteiro */
 .mae {
@@ -9,8 +21,8 @@ body {
     font-weight: 500;
     font-style: normal;
     width: 100%;
-    background-color: #BF604B;
-    
+    height: 100vh;
+    color: white;
 }
 
 /* Espaço Home */
@@ -24,39 +36,40 @@ body {
     align-items: center;
     margin-bottom: 20px;
     padding-top: 15px;
-    margin-bottom: 3% ;
-   height: 100px;
+    height: 100px;
 }
 
 
 /* Conteúdo do Site */
 
-.corpoHome{
+.corpoHome {
     width: 100%;
     height: 100%;
+    overflow: hidden;
+    background-image: linear-gradient(to bottom, #BF604B, #7C587E);
+
 }
 
 .sobre,
-.proposta,
 .contato {
     cursor: pointer;
     transition: border-color 0.4s;
     border-bottom: 2px solid transparent;
+    transition: 0.5s
 }
 
 
 .sobre:hover,
-.proposta:hover,
 .contato:hover {
     cursor: pointer;
     transition: 0.4s;
     border-bottom: 2px solid white;
-
+    transform: scale(1.1);
 }
 
 
 .Textonav {
-    font-size: large;
+    font-size: larger;
     color: white;
     display: flex;
     flex-direction: row;
@@ -80,16 +93,20 @@ body {
     width: 100%;
     height: 555px;
     color: white;
-    position: relative;/* Define position relative para os elementos filhos */
-    z-index: 1;/* Define um z-index maior para que o conteúdo fique na frente da imagem */
+    position: relative;
+    /* Define position relative para os elementos filhos */
+    z-index: 1;
+    /* Define um z-index maior para que o conteúdo fique na frente da imagem */
 }
 
 
-.bemVindo{
+.bemVindo {
     width: 12%;
     font-weight: 250;
-    margin-left: 15%; 
+    margin-left: 15%;
     height: 20px;
+    margin-bottom: 4vh;
+
 }
 
 
@@ -100,14 +117,16 @@ body {
 
 }
 
-.textoSintetize{
-    width: 55%;   
+.textoSintetize {
+    width: 55%;
     height: 100px;
+    margin-top: 10vh;
 }
 
 .textoCorpo {
     font-size: x-large;
-    margin-left: 50px;
+    margin-left: 10vh;
+    margin-bottom: 5vh;
 }
 
 
@@ -124,25 +143,27 @@ body {
 
 .meninaimg {
     position: absolute;
-    top: 111px;
+    top: 7px;
     left: 800px;
-    width: 40%; /* ajusta o tamanho caso sair pra fora da tela  */
-    height: 100%;
-    z-index: 0; /* Define um z-index menor para que a imagem fique na frente da cor de fundo */
+    width: 50%;
+    /* ajusta o tamanho caso sair pra fora da tela  */
+    height: 120%;
+    z-index: 0;
+    /* Define um z-index menor para que a imagem fique na frente da cor de fundo */
 }
 
 
 .imagemFundo {
-    width: 95%;
-    height: 85%;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
     margin-top: -6.9px;
-    margin-left: 142px ;
+    margin-left: 142px;
 }
 
 
 .button {
-    margin-top: 90px ;
+    margin-top: 13vh;
     font-family: "Poppins", sans-serif;
     font-weight: 600;
     font-style: normal;
@@ -151,7 +172,7 @@ body {
     align-items: center;
     justify-content: center;
     width: 30%;
-    height: 70px;
+    height: 10vh;
     color: white;
     transition: 0.5s;
     border: solid 2px white;
@@ -161,7 +182,7 @@ body {
 
 .button:hover {
     background-color: #ffffff;
-    color: #BF604B;
+    color: #7C587E;
     transition: 0.5s;
     border: none;
 }
@@ -169,21 +190,285 @@ body {
 
 /* Espaço Sobre o Projeto */
 
-.corpoSP{
-    width:100%;
-    height: 737px;
-    background-color: #F2CEA2;
+.corpoSP {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(to bottom, #7C587E, #a570a8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.iconLivro,
+.iconCelular {
+    position: absolute;
+
+}
+
+.iconLivro:last-of-type {
+    left: 10vh;
+}
+
+.iconCelular:first-of-type {
+    right: 7vh;
+}
+
+.iconCelular {
+    margin-top: -10vh;
+
+}
+
+.iconLivro {
+    margin-left: 30px;
+    margin-top: -70vh;
+
+}
+
+.tituloSP {
+    font-size: xx-large;
+    margin-top: -10vh;
+
+}
+
+.textoSP {
+    margin-top: 10vh;
+    font-size: larger;
+}
+
+.texto1SP {
+    margin-left: 5vh;
+    margin-bottom: 3vh;
+}
+
+
+.texto2SP {
+    margin-left: 5vh;
+}
+
+
+/* citação */
+
+.corpoC {
+    font-size: xx-large;
+    font-weight: 200;
+    width: 100%;
+    height: 120vh;
+    background-image: linear-gradient(to bottom, #a570a8, #c374c7, #EF9188);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+}
+
+.textoC {
+    margin-bottom: 12vh;
+}
+
+.textoRestante {
+    font-weight: 400;
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    text-align: center;
+    margin-left: 15vh;
+}
+
+.onu {
+    transition: 0.5s
+}
+
+.onu:hover {
+    transform: scale(1.1);
+    transition: 0.5s
+}
+
+.buttonFonte {
+    margin-left: 75vh;
+    transition: 0.5s;
+    width: 25%;
+    border: 2px solid transparent;
+}
+
+.buttonFonte:hover {
+    transform: scale(1.1);
+    transition: 0.5s;
+    background-color: #ffff;
+    color: #EF9188;
+
 }
 
 /* Espaço Contato/Footer */
 
-.corpoFooter{
 
-    width:100%;
-    height: 737px;
+
+.corpoFooter {
+    width: 100%;
+    height: 100vh;
     background-color: #EF9188;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.tituloFooter{
+.tituloHeader {
+
+    font-size: x-large;
+    transform: translateY(-4vh);
+
+}
+
+.conteudoFooter {
     display: flex;
+    transform: translateY(-2vh);
+}
+
+
+.corpoFaleC {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 30vh;
+    height: 65vh;
+    margin-left: 50vh;
+    transform: translateX(9vh);
+
+}
+
+.quadradoMensagem {
+    background-color: #BF604B;
+    width: 60vh;
+    height: 65vh;
+}
+
+form {
+    margin-top: 5vh;
+    margin-left: 10vh;
+}
+
+input::placeholder {
+    color: inherit;
+    font-size: large;
+}
+
+.Nome {
+    margin-bottom: 5vh;
+}
+
+.mensagem {
+    height: 200px;
+    margin-bottom: 5vh;
+}
+
+input {
+    border: none;
+    /* Remove qualquer borda padrão */
+    border-bottom: 3px solid #F2CEA2;
+    outline: none;
+    /* Remove o contorno padrão quando o input está focado */
+    padding: 5px;
+    appearance: none;
+    font-family: inherit;
+    font-size: small;
+    color: inherit;
+    width: 80%;
+    background-color: transparent;
+}
+
+.btnEnviar {
+
+    color: inherit;
+    background-color: #F2CEA2;
+    font-weight: 500;
+    font-size: x-large;
+    font-family: inherit;
+    border: none;
+    background-color: none;
+    width: 80%;
+    height: 7vh;
+    transition: 0.5s;
+    transition: 0.5s;
+    border: 2px solid transparent;
+
+
+}
+
+
+.btnEnviar:hover {
+    
+    transition: 0.5s;
+    background-color: #ffff;
+    color: #BF604B;
+
+}
+
+.enderecoMedia {
+    width: 25vh;
+    transform: translateY(7vh);
+}
+
+.socialMedia {
+    display: flex;
+}
+
+.bolhaLink,
+.bolhaInsta {
+    transition: 0.5s;
+}
+
+.bolhaInsta {
+    margin-left: 2vh;
+
+}
+
+.bolhaLink:hover,
+.bolhaInsta:hover {
+    transform: scale(1.2);
+}
+
+.conteudoCopy {
+    font-size: large;
+    transform: translateY(5vh);
+
+}
+
+.centralizandoLinha {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+    transform: translateY(100px);
+}
+
+.linha {
+    transform: translateX(25vh);
+    border-radius: 4px;
+    width: 4px;
+    /* Largura da linha */
+    height: 35vh;
+    /* Altura da linha */
+    background-color: #F2CEA2;
+    /* Cor da linha */
+}
+
+.success,
+.error {
+    text-align: center;
+}
+
+.success {
+    color: greenyellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.error {
+    color: tomato;
 }
