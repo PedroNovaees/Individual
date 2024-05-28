@@ -5,6 +5,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior:smooth;
+}
+
 a {
     color: inherit;
     /* Herda a cor do texto do elemento pai */
@@ -400,7 +404,7 @@ input {
 
 
 .btnEnviar:hover {
-    
+
     transition: 0.5s;
     background-color: #ffff;
     color: #BF604B;
