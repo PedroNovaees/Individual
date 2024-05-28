@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/imgs/logoaba.png">
+    <title> SintonizaMente | Login </title>
+    <script src="./js/sessao.js"></script>
+    <link rel="stylesheet" href="./css/estilo.css">
+</head>
+
+<body>
+
+    <div class="login">
+        <div class="alerta_erro">
+            <div class="card_erro" id="cardErro">
+                <span id="mensagem_erro"></span>
+            </div>
+        </div>
+        <div class="container">
+            <div class="card-login">
+
+                <div class="arrowHome">
+                        <a href="C:\Users\gabri\Downloads\web-data-viz\public\home.html">
+                        <img src="imgs/seta.png" width="15%" class="seta">
+                        <span class="pHome">Home</span>
+                    </a>
+                    </div>
+                <div class="formulario">
+
+                    <h2 style="color: rgb(87, 86, 86 );">Bem-Vindo!</h2>
+                    <div class="campo">
+                        <input id="email_input" type="text" placeholder="Email">
+                    </div>
+                    <div class="campo">
+                        <input id="senha_input" type="password" placeholder="Senha">
+                    </div>
+                    
+                    <button class="botao" >E n t r a r</button>
+
+                    <p class="textoCadastro">Não tem cadastro? <strong style="color:#EF9188;"
+                            class="strong cadastro"> <a href="file:///C:/Users/gabri/Downloads/web-data-viz/public/cadastro.html">CADASTRAR</a></strong></p>
+                    <p class="trocarSenha">Esqueceu sua senha? <strong style="color:#EF9188;"
+                            class="strong senha">TROCAR SENHA</strong></p>
+
+                </div>
+
+
+
+                <!-- 
+                    <div id="div_aguardar" class="loading-div">
+                        <img src="./assets/circle-loading.gif" id="loading-gif">
+                    </div> -->
+
+                <div id="div_erros_login"></div>
+            </div>
+
+            <div class="imgMenino">
+                <img src="imgs/menino.png" width="100%">
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
+
+<script>
+
+
+    function entrar() {
+        aguardar();
+
+        var emailVar = email_input.value;
+        var senhaVar = senha_input.value;
+
+        if (emailVar == "" || senhaVar == "") {
+            cardErro.style.display = "block"
+            mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
+            finalizarAguardar();
+            return false;
+        }
+        else {
+            setInterval(sumirMensagem, 5000)
+        }
+
+        console.log("FORM LOGIN: ", emailVar);
+        console.log("FORM SENHA: ", senhaVar);
+
+        fetch("/usuarios/autenticar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                emailServer: emailVar,
+                senhaServer: senhaVar
+            })
+        }).then(function (resposta) {
+            console.log("ESTOU NO THEN DO entrar()!")
+
+            if (resposta.ok) {
+                console.log(resposta);
+
+                resposta.json().then(json => {
+                    console.log(json);
+                    console.log(JSON.stringify(json));
+                    sessionStorage.EMAIL_USUARIO = json.email;
+                    sessionStorage.NOME_USUARIO = json.nome;
+                    sessionStorage.ID_USUARIO = json.id;
+                    sessionStorage.AQUARIOS = JSON.stringify(json.aquarios)
+
+                    setTimeout(function () {
+                        window.location = "./dashboard/cards.html";
+                    }, 1000); // apenas para exibir o loading
+
+                });
+
+            } else {
+
+                console.log("Houve um erro ao tentar realizar o login!");
+
+                resposta.text().then(texto => {
+                    console.error(texto);
+                    finalizarAguardar(texto);
+                });
+            }
+
+        }).catch(function (erro) {
+            console.log(erro);
+        })
+
+        return false;
+    }
+
+    function sumirMensagem() {
+        cardErro.style.display = "none"
+    }
+
+</script>
