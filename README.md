@@ -1,12 +1,12 @@
 
 
-SintetizaMente - 🎻
+SintotizaMente - 🎻
 
- SintoNizaMente tem como objetivo mostrar como a música pode ser uma poderosa aliada no seu desempenho diário. Através de pesquisas e estudos, demonstramos os diversos benefícios que a música pode proporcionar em diferentes aspectos da vida. Oferecemos um quiz interativo que ajuda você a descobrir estilos musicais que mais podem beneficiar seu cotidiano. A partir das suas respostas, oferecemos recomendações personalizadas de playlists e músicas específicas para cada necessidade
+ SintonizaMente tem como objetivo mostrar como a música pode ser uma poderosa aliada no seu desempenho diário. Através de pesquisas e estudos, demonstramos os diversos benefícios que a música pode proporcionar em diferentes aspectos da vida. Oferecemos um quiz interativo que ajuda você a descobrir estilos musicais que mais podem beneficiar seu cotidiano. A partir das suas respostas, oferecemos recomendações personalizadas de playlists e músicas específicas para cada necessidade
 
 Site Institucional - 💻
 
-Bem-vindo ao SintoNizaMente, seu portal para explorar como a música pode transformar seu dia a dia. Nosso site institucional apresenta nosso projeto, que visa mostrar os benefícios da música no desempenho e bem-estar diário.
+Bem-vindo ao SintonizaMente, seu portal para explorar como a música pode transformar seu dia a dia. Nosso site institucional apresenta nosso projeto, que visa mostrar os benefícios da música no desempenho e bem-estar diário.
 
 ![alt text](image.png)
 
