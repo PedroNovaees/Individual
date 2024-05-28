@@ -11,8 +11,26 @@ _Implementação de Referência para o seu Projeto de Primeiro Semestre_
 1. Clone este repositório em sua máquina.
 
 
+<<<<<<< HEAD
 1. Crie, no Banco de Dados, as tabelas necessárias para o funcionamento deste projeto.
 - Siga as instruções no arquivo **/src/database/script-tabelas.sql**
+=======
+SintonizaMente - 🎻
+
+ SintonizaMente tem como objetivo mostrar como a música pode ser uma poderosa aliada no seu desempenho diário. Através de pesquisas e estudos, demonstramos os diversos benefícios que a música pode proporcionar em diferentes aspectos da vida. Oferecemos um quiz interativo que ajuda você a descobrir estilos musicais que mais podem beneficiar seu cotidiano. A partir das suas respostas, oferecemos recomendações personalizadas de playlists e músicas específicas para cada necessidade
+
+Site Institucional - 💻
+
+Bem-vindo ao SintonizaMente, seu portal para explorar como a música pode transformar seu dia a dia. Nosso site institucional apresenta nosso projeto, que visa mostrar os benefícios da música no desempenho e bem-estar diário.
+
+![alt text](<Montagem README/image.png>)
+
+![alt text](<Montagem README/image-1.png>)
+
+![alt text](<Montagem README/image-2.png>)
+
+![alt text](<Montagem README/image-3.png>)
+>>>>>>> 1123fa10e3e01ac4d5e2c8831f8ebb58be313cf3
 
 
 3. Acesse o arquivo **app.js** e parametrize o ambiente.
@@ -21,6 +39,7 @@ _Implementação de Referência para o seu Projeto de Primeiro Semestre_
 
 4. Adicione as credenciais de Banco de Dados no arquivo **.env** ou em **.end.dev**, seguindo as instruções neste.
 
+<<<<<<< HEAD
 5. Acesse este repositório no seu terminal (GitBash ou VSCode) e execute os comandos abaixo:
 
 ```
@@ -102,3 +121,6 @@ Abaixo, uma figura que ajuda a compreender o caminho percorrido para, por exempl
 
 [1] https://datatracker.ietf.org/doc/html/rfc2396  
 [2] https://datatracker.ietf.org/doc/html/rfc7231
+=======
+![alt text](<Montagem README/icons8-css-48.png>) ![alt text](<Montagem README/icons8-html-48.png>) ![alt text](<Montagem README/icons8-js-48.png>) ![alt text](<Montagem README/icons8-mysql-48.png>)
+>>>>>>> 1123fa10e3e01ac4d5e2c8831f8ebb58be313cf3
