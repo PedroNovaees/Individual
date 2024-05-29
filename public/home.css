@@ -1,13 +1,20 @@
 /* Reset CSS */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+
+/* Deixa o scroll mais suave */
+
 html {
-    scroll-behavior:smooth;
+    scroll-behavior: smooth;
+
 }
+
+
 
 a {
     color: inherit;
@@ -105,32 +112,32 @@ a {
 
 
 .bemVindo {
-    width: 12%;
+    width: max-content;
     font-weight: 250;
     margin-left: 15%;
-    height: 20px;
+    height: min-content;
     margin-bottom: 4vh;
-
 }
 
 
 .sintonizaMente {
     font-size: 80px;
-    width: 44%;
-    height: 100px;
-
+    width: min-content;
+    height: min-content;
+    transform: translate(-1vh);
 }
 
 .textoSintetize {
     width: 55%;
     height: 100px;
-    margin-top: 10vh;
+    margin-top: 7vh;
 }
 
 .textoCorpo {
-    font-size: x-large;
+    font-size: 3.3vh;
     margin-left: 10vh;
     margin-bottom: 5vh;
+    margin-top: 2vh;
 }
 
 
@@ -149,25 +156,24 @@ a {
     position: absolute;
     top: 7px;
     left: 800px;
-    width: 50%;
+    width: 100vh;
     /* ajusta o tamanho caso sair pra fora da tela  */
-    height: 120%;
+    height: 90vh;
     z-index: 0;
     /* Define um z-index menor para que a imagem fique na frente da cor de fundo */
+    transform: translateX(-60px);
 }
 
 
 .imagemFundo {
-    width: 100%;
+    width: 100vh;
     height: 100%;
     object-fit: cover;
-    margin-top: -6.9px;
-    margin-left: 142px;
 }
 
 
 .button {
-    margin-top: 13vh;
+    margin-top: 9vh;
     font-family: "Poppins", sans-serif;
     font-weight: 600;
     font-style: normal;
@@ -175,13 +181,13 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 30%;
-    height: 10vh;
+    width: 40%;
+    height: 12vh;
     color: white;
     transition: 0.5s;
     border: solid 2px white;
     text-decoration: none;
-    margin-left: 27%;
+    transform: translateX(11vh);
 }
 
 .button:hover {
@@ -332,13 +338,19 @@ a {
 }
 
 
+#mensagem_erro {
+    width: 75%;
+    height: 25%;
+    background-color: blue;
+}
+
 .corpoFaleC {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 30vh;
-    height: 65vh;
+    width: 35vh;
+    height: min-content;
     margin-left: 50vh;
     transform: translateX(9vh);
 
@@ -348,11 +360,15 @@ a {
     background-color: #BF604B;
     width: 60vh;
     height: 65vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
 
 form {
-    margin-top: 5vh;
-    margin-left: 10vh;
+    width: 40vh;
+    height: max-content;
 }
 
 input::placeholder {
@@ -365,7 +381,7 @@ input::placeholder {
 }
 
 .mensagem {
-    height: 200px;
+    height: 20vh;
     margin-bottom: 5vh;
 }
 
@@ -375,12 +391,12 @@ input {
     border-bottom: 3px solid #F2CEA2;
     outline: none;
     /* Remove o contorno padrão quando o input está focado */
-    padding: 5px;
+    padding: 1vh;
     appearance: none;
     font-family: inherit;
     font-size: small;
     color: inherit;
-    width: 80%;
+    width: 40vh;
     background-color: transparent;
 }
 
@@ -393,12 +409,11 @@ input {
     font-family: inherit;
     border: none;
     background-color: none;
-    width: 80%;
+    width: 40vh;
     height: 7vh;
     transition: 0.5s;
     transition: 0.5s;
     border: 2px solid transparent;
-
 
 }
 
@@ -418,6 +433,8 @@ input {
 
 .socialMedia {
     display: flex;
+    width: min-content;
+    height: min-content;
 }
 
 .bolhaLink,
@@ -440,6 +457,12 @@ input {
     transform: translateY(5vh);
 
 }
+
+.tituloRS {
+    height: min-content;
+    width: 30vh;
+}
+
 
 .centralizandoLinha {
     display: flex;

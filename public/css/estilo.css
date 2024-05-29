@@ -18,44 +18,35 @@ a {
 
 body {
   font-family: "Poppins", sans-serif;
-  
+  background-color: #EF9188;
+
 }
 
 
-p{
+p {
   transform: translateY(-10px);
 }
-.mae{
-  background-color: #BF604B;
-  width: 100%;
-  height: 100vh;
-  z-index: 1;
-}
+
 .login {
   width: 100%;
-  height: 100vh;
-  background-color: #EF9188;
+  height: 100%;
   z-index: -1;
-}
-
-.container {
   display: flex;
-  justify-content: center;
+  justify-content:center;
   align-items: center;
-  flex-direction: row;
-
+  transform: translateY(5vh);
 }
+
+.container {}
 
 .card-login {
   width: 60vh;
   height: 80vh;
   background-color: white;
-  margin-top: 10vh;
+
 }
 
-.imgMenino {
-  margin-top: 10vh;
-}
+.imgMenino {}
 
 button {
 
@@ -69,8 +60,7 @@ button {
   width: 100%;
   height: 7.5vh;
   transition: 0.4s;
-
-
+  transform: translateY(-10vh);
 }
 
 button:hover {
@@ -78,24 +68,22 @@ button:hover {
   background-color: #ffff;
   color: #2E59A7;
   font-weight: 400;
-  border: 1px solid #2E59A7;
-
+  border: 2px solid #7e9bd0;
 
 }
 
 .seta {
-  transform: rotate(-180deg);
+  transform: rotate(-180deg) ;
   margin-left: 10px;
   margin-bottom: -3.5px;
 }
 
 .pHome {
-  margin-top: -20px;
   margin-left: 5px;
 }
 
 .arrowHome {
-  margin-top: 10px;
+  transform: translateY(3vh);
   display: flex;
   justify-content: start;
 
@@ -106,9 +94,7 @@ button:hover {
   display: grid;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  height: 100%;
-
+  height: 90vh;
 }
 
 
@@ -132,22 +118,15 @@ input::placeholder {
   font-size: large;
 }
 
-strong {
-  transition: 0.5s;
-}
-
-strong:hover {
-  transform: scale(1.2);
-  transition: 0.5s;
-
-}
-
 h2 {
   font-size: 5vh;
 
 }
 
-.trocarSenha {
-  margin-top: -10vh;
-  margin-left: -2.5vh;
+.textoCadastro {
+  transform: translatey(-15vh);
+}
+
+#senha_input{
+  transform: translateY(-5vh);
 }

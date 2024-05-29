@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="assets/imgs/logoaba.png">
+    <link rel="shortcut icon" href="imgs/logoaba.png">
     <title> SintonizaMente | Login </title>
     <script src="./js/sessao.js"></script>
     <link rel="stylesheet" href="./css/estilo.css">
@@ -23,7 +23,7 @@
             <div class="card-login">
 
                 <div class="arrowHome">
-                    <a href="C:\Users\gabri\Downloads\Individual - SintonizaMente\public\home.html">
+                    <a href="index.html">
                         <img src="imgs/seta.png" width="15%" class="seta">
                         <span class="pHome">Home</span>
                     </a>
@@ -38,14 +38,13 @@
                         <input id="senha_input" type="password" placeholder="Senha">
                     </div>
 
-                    <button class="botao">E n t r a r</button>
+                    <button class="botao" onclick="entrar()">E n t r a r</button>
 
                     <p class="textoCadastro">Não tem cadastro? <strong style="color:#EF9188;" class="strong cadastro">
-                            <a
-                                href="C:\Users\gabri\Downloads\Individual - SintonizaMente\public\cadastro.html">CADASTRAR</a></strong>
+                            <a href="cadastro.html">CADASTRAR</a></strong>
                     </p>
-                    <p class="trocarSenha">Esqueceu sua senha? <strong style="color:#EF9188;"
-                            class="strong senha">TROCAR SENHA</strong></p>
+                    <!-- <p class="trocarSenha">Esqueceu sua senha? <strong style="color:#EF9188;"
+                            class="strong senha">TROCAR SENHA</strong></p> -->
 
                 </div>
 
@@ -56,12 +55,14 @@
                         <img src="./assets/circle-loading.gif" id="loading-gif">
                     </div> -->
 
-                <div id="div_erros_login"></div>
-            </div>
 
-            <div class="imgMenino">
-                <img src="imgs/menino.png" width="100%">
+                <div id="div_erros_login"></div>
+
             </div>
+        </div>
+
+        <div class="imgMenino">
+            <img src="imgs/menino.png" width="%">
         </div>
     </div>
 
@@ -73,16 +74,18 @@
 <script>
 
 
+
+
     function entrar() {
-        aguardar();
+        // aguardar();
 
         var emailVar = email_input.value;
         var senhaVar = senha_input.value;
 
         if (emailVar == "" || senhaVar == "") {
             cardErro.style.display = "block"
-            mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
-            finalizarAguardar();
+
+            // finalizarAguardar();
             return false;
         }
         else {
@@ -113,7 +116,7 @@
                     sessionStorage.EMAIL_USUARIO = json.email;
                     sessionStorage.NOME_USUARIO = json.nome;
                     sessionStorage.ID_USUARIO = json.id;
-                    sessionStorage.AQUARIOS = JSON.stringify(json.aquarios)
+                    // sessionStorage.AQUARIOS = JSON.stringify(json.aquarios)
 
                     setTimeout(function () {
                         window.location = "./dashboard/cards.html";
@@ -127,7 +130,7 @@
 
                 resposta.text().then(texto => {
                     console.error(texto);
-                    finalizarAguardar(texto);
+                    div
                 });
             }
 

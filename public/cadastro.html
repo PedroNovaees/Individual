@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="shortcut icon" href="assets/imgs/logoaba.png">
+  <link rel="shortcut icon" href="imgs/logoaba.png">
   <title>SintonizaMente | Cadastro</title>
 
   <script src="./js/sessao.js"></script>
@@ -13,7 +13,9 @@
   <link rel="stylesheet" href="./css/estilo2.css" />
 </head>
 
-<body onload="listar()">
+<!-- onload="listar()" -->
+
+<body>
 
   <div class="mae">
     <div class="login">
@@ -26,7 +28,7 @@
         <div class="card-login">
 
           <div class="arrowHome">
-            <a href="C:\Users\gabri\Downloads\Individual - SintonizaMente\public\home.html">
+            <a href="index.html">
               <img src="imgs/seta.png" width="15%" class="seta">
               <span class="pHome">Home</span>
             </a>
@@ -46,20 +48,20 @@
 
 
 
+            <button class="botao" onclick="cadastrar()">C a d a s t r a r</button>
             <p class="textoCadastro">Já possui uma conta?<strong style="color:#EF9188;" class="strong cadastro"> <a
-                  href="C:\Users\gabri\Downloads\Individual - SintonizaMente\public\login.html">ENTRAR</a> </strong></p>
-            <button class="botao" onclick="cadastrar()">Cadastrar</button>
+                  href="login.html">ENTRAR</a> </strong></p>
           </div>
-          <!--         
-        <div id="div_aguardar" class="loading-div">
-          <img src="./assets/circle-loading.gif" id="loading-gif" />
-        </div> -->
+
+          <!-- <div id="div_aguardar" class="loading-div">
+            <img src="./assets/circle-loading.gif" id="loading-gif" />
+          </div> -->
 
           <div id="div_erros_login"></div>
         </div>
-      <div class="imgMenina">
-        <img src="imgs/menina.png" width="100%">
-      </div>
+        <div class="imgMenina">
+          <img src="imgs/menina.png" width="95%">
+        </div>
       </div>
     </div>
   </div>
@@ -69,21 +71,18 @@
 
 <script>
   function cadastrar() {
-    aguardar();
+    // aguardar();
 
     //Recupere o valor da nova input pelo nome do id
     // Agora vá para o método fetch logo abaixo
     var nomeVar = nome_input.value;
     var emailVar = email_input.value;
     var senhaVar = senha_input.value;
-    var confirmacaoSenhaVar = confirmacao_senha_input.value;
-    var empresaVar = listaEmpresas.value
+
     if (
       nomeVar == "" ||
       emailVar == "" ||
-      senhaVar == "" ||
-      confirmacaoSenhaVar == "" ||
-      empresaVar == ""
+      senhaVar == ""
     ) {
       cardErro.style.display = "block";
       mensagem_erro.innerHTML =
@@ -107,7 +106,7 @@
         nomeServer: nomeVar,
         emailServer: emailVar,
         senhaServer: senhaVar,
-        empresaServer: empresaVar
+        
       }),
     })
       .then(function (resposta) {
@@ -124,7 +123,7 @@
           }, "2000");
 
           limparFormulario();
-          finalizarAguardar();
+          // finalizarAguardar();
         } else {
           throw "Houve um erro ao tentar realizar o cadastro!";
         }
@@ -137,21 +136,21 @@
     return false;
   }
 
-  function listar() {
-    fetch("/empresas/listar", {
-      method: "GET",
-    })
-      .then(function (resposta) {
-        resposta.json().then((empresas) => {
-          empresas.forEach((empresa) => {
-            listaEmpresas.innerHTML += `<option value='${empresa.id}'>${empresa.cnpj}</option>`;
-          });
-        });
-      })
-      .catch(function (resposta) {
-        console.log(`#ERRO: ${resposta}`);
-      });
-  }
+  // function listar() {
+  //   fetch("/empresas/listar", {
+  //     method: "GET",
+  //   })
+  //     .then(function (resposta) {
+  //       resposta.json().then((empresas) => {
+  //         empresas.forEach((empresa) => {
+  //           listaEmpresas.innerHTML += `<option value='${empresa.id}'>${empresa.cnpj}</option>`;
+  //         });
+  //       });
+  //     })
+  //     .catch(function (resposta) {
+  //       console.log(`#ERRO: ${resposta}`);
+  //     });
+  // }
 
   function sumirMensagem() {
     cardErro.style.display = "none";

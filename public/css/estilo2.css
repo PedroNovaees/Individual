@@ -8,6 +8,7 @@
 }
 
 a {
+    
     color: inherit;
     /* Herda a cor do texto do elemento pai */
     text-decoration: none;
@@ -18,40 +19,46 @@ a {
 
 body {
     font-family: "Poppins", sans-serif;
+    background-color: #BF604B;
 
 }
 
 .mae {
-    background-color: #BF604B;
     width: 100%;
     height: 100vh;
     z-index: 1;
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
 }
 
 .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+    width: 100%;
+    height: 90vh;
     flex-direction: row-reverse;
-    overflow: hidden;
+    display: flex;
 }
 
 .card-login {
-    width: 60vh;
+    width: 65vh;
     height: 80vh;
     background-color: white;
-    margin-top: 10vh;
     display: flex;
+    justify-content: center;
+    overflow: hidden;
 }
 
 .imgMenina {
-    margin-top: 10vh;
-    margin-left: 4vh;
-    transform: translateX(-5px);
+
+    transform: translateY(10px) translateX(2vh);
+
 }
 
 button {
-    margin-top: 1vh;
+
     color: white;
     background-color: #2E59A7;
     font-weight: 700;
@@ -62,7 +69,7 @@ button {
     width: 100%;
     height: 7.5vh;
     transition: 0.4s;
-    transform: translateY(-15px);
+    transform: translateY(3vh);
 }
 
 button:hover {
@@ -76,23 +83,24 @@ button:hover {
 }
 
 .seta {
-    transform: rotate(-180deg);
+    transform: rotate(-180deg) translateY(-0.2vh);
     margin-left: 10px;
-    margin-bottom: -2px;
+    
 }
 
 .pHome {
-    
     margin-left: 5px;
 }
 
 .arrowHome {
-    margin-top: 15px;
+    transform: translateY(1vh);
+    width: 20vh;
+    height: min-content;
     display: flex;
     justify-content: start;
-    height: 5%;
-    width: 20%;
+
 }
+
 
 .formulario {
     display: grid;
@@ -100,7 +108,9 @@ button:hover {
     align-items: center;
     flex-direction: column;
     height: 100%;
-    margin-left: -25px;
+    width: 100vh;
+    margin-left: -10vh;
+    overflow: hidden;
 }
 
 
@@ -141,7 +151,7 @@ h2 {
 
 }
 
-.trocarSenha {
-    margin-top: -10vh;
-    margin-left: -2.5vh;
+.textoCadastro {
+    text-align: center;
+
 }
