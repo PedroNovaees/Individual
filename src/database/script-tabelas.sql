@@ -8,18 +8,41 @@ comandos para mysql server
 
 -- Sintoniza
 
+
+
 CREATE DATABASE sintonizamente;
 
 USE sintonizamente;
 
 CREATE TABLE usuario (
-	id INT PRIMARY KEY AUTO_INCREMENT,
-	nome VARCHAR(50),
-	email VARCHAR(50),
-	senha VARCHAR(50)
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    nome VARCHAR(45),
+    email VARCHAR(255),
+    senha VARCHAR(100)
 );
 
+CREATE TABLE teste (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    estilo VARCHAR(45),
+    qtdPergunta VARCHAR(255)
+);
 
+CREATE TABLE realiza (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    fkUsuario INT, FOREIGN KEY (fkUsuario) REFERENCES usuario(id),
+    fkTeste INT,FOREIGN KEY (fkTeste) REFERENCES teste(id),
+    qtdRealizada INT,
+    dtRealizada DATETIME,
+    UNIQUE KEY unique_realiza (fkUsuario, fkTeste) -- Restrição Unique para as chaves estrangeiras.
+);
+
+SELECT * FROM usuario;
+SELECT * FROM teste;
+SELECT * FROM realiza;
+
+
+SELECT * FROM usuario JOIN realiza ON usuario.id = realiza.fkUsuario
+JOIN teste ON teste.id = realiza.fkTeste;   
 
 -- Aquatech
 
