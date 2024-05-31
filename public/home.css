@@ -24,6 +24,13 @@ a {
 }
 
 
+.logo{
+    transition: 0.5s;
+}
+
+.logo:hover{
+    transform: scale(1.1);
+}
 
 
 /* div mae para conter o body inteiro */
