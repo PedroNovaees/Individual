@@ -8,16 +8,16 @@ Site Institucional - 💻
 
 Bem-vindo ao SintonizaMente, seu portal para explorar como a música pode transformar seu dia a dia. Nosso site institucional apresenta nosso projeto, que visa mostrar os benefícios da música no desempenho e bem-estar diário.
 
-![alt text](<Montagem README/image.png>)
+![alt text](<README-Conteudo/image.png>)
 
-![alt text](<Montagem README/image-1.png>)
+![alt text](<README-Conteudo/image-1.png>)
 
-![alt text](<Montagem README/image-2.png>)
+![alt text](<README-Conteudo/image-2.png>)
 
-![alt text](<Montagem README/image-3.png>)
+![alt text](<README-Conteudo/image-3.png>)
 
 
 
    Tecnologias - ⚙ 
 
-![alt text](<Montagem README/icons8-css-48.png>) ![alt text](<Montagem README/icons8-html-48.png>) ![alt text](<Montagem README/icons8-js-48.png>) ![alt text](<Montagem README/icons8-mysql-48.png>)
+![alt text](<README-Conteudo/icons8-css-48.png>) ![alt text](<README-Conteudo/icons8-html-48.png>) ![alt text](<README-Conteudo/icons8-js-48.png>) ![alt text](<README-Conteudo/icons8-mysql-48.png>)
