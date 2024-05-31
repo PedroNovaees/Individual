@@ -2,14 +2,14 @@
 <html lang="pt-br">
 
 <head>
-    <link rel="shortcut icon" href="../assets/icon/favicon2.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../imgs/logoaba.png" type="image/x-icon">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AquaTech | Avisos</title>
+    <title> SintonizaMente | Configurações </title>
 
     <link rel="stylesheet" href="./../css/dashboards.css">
-    <link rel="stylesheet" href="./../css/estilo.css" />
+    
     <script src="../js/sessao.js"></script>
     <script src="./../js/alerta.js"></script>
 
@@ -19,38 +19,51 @@
         rel="stylesheet">
 </head>
 
-<body onload="validarSessao(), atualizarFeed()" style="background-color: #161618;">
+<body onload="validarSessao(), atualizarFeed()" style="background-color: #ddaca1;" >
 
     <div class="janela">
 
 
         <div class="header-left">
 
-            <h1>AquaTech</h1>
+          
+
+            <div class="logo"><a href="./cards.html"><img src="../imgs/soundwaves.png" width="190vh" height="50vh"></a></div>
 
             <div class="hello">
-                <h3>Olá, <span id="b_usuario">usuário</span>!</h3>
+                <h3>Olá, <span id="b_usuario">usuário</span><span>!</span></h3>
             </div>
 
             <div class="btn-nav-white">
-                <a href="cards.html">
-                    <h3>Aquários</h3>
+                <a href="dashboard.html">
+                    <h4> <img src="../imgs/dashbord.png" width="40vh" class="D">Dashboard</h4>
                 </a>
             </div>
 
             <div class="btn-nav-white">
-                <a href="./dashboard.html">
-                    <h3>Gráficos</h3>
+                <a href="./cards.html">
+                <h4 > <img src="../imgs/questionario.png" width="40vh" class="Q">Questionário</h4>
                 </a>
             </div>
 
             <div class="btn-nav">
-                <h3>Mural de Avisos</h3>
+                <a href="./mural.html">
+                    <h4> <img src="../imgs/configuracao.png" width="45vh" class="C"> Configurações</h4>
+                </a>
             </div>
 
-            <div class="btn-logout" onclick="limparSessao()">
-                <h3>Sair</h3>
-            </div>
+              <button class="botaoLogout" onclick="limparSessao()">
+                <div class="sign">
+                    <svg viewBox="0 0 512 512">
+                        <path
+                            d="M377.9 105.9L500.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L377.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1-128 0c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM160 96L96 96c-17.7 0-32 14.3-32 32l0 256c0 17.7 14.3 32 32 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0c-53 0-96-43-96-96L0 128C0 75 43 32 96 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32z">
+                        </path>
+                    </svg>
+                </div>
+                <div class="text">Sair</div>
+            </button>
+
+         
 
         </div>
 
@@ -236,14 +249,14 @@
                         feed.appendChild(divPublicacao);
                     }
 
-                    finalizarAguardar();
+                   // finalizarAguardar(); 
                 });
             } else {
                 throw ('Houve um erro na API!');
             }
         }).catch(function (resposta) {
             console.error(resposta);
-            finalizarAguardar();
+          //  finalizarAguardar(); 
         });
     }
 
