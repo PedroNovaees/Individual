@@ -1,6 +1,8 @@
-/* pagina mural */
+
 
 @import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Todos os conteúdos */ 
 
 body {
   margin: 0;
@@ -8,10 +10,15 @@ body {
   font-family: 'Barlow', 'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+/* Conteúdo da Dashbord*/ 
+
 .label-captura {
   display: flex;
   justify-content: center;
 }
+
+
+/* Conteúdo da edição-aviso, e mural*/ 
 
 .dash-right .avisos {
   width: 100%;
@@ -75,6 +82,7 @@ body {
   width: 80px;
 }
 
+/* Edição do mural*/ 
 .publicacao {
   display: flex;
   flex-wrap: wrap;
@@ -85,29 +93,25 @@ body {
   border-bottom: 3px solid #e6005a;
   padding: 20px;
 }
-
 .publicacao>*:not(:last-child) {
   padding: 0 0 10px 0;
 }
-
 .div-results {
   width: 100%;
 }
-
 .div-results .feed-container {
   background-color: #212124;
   border-radius: 5px;
   margin-bottom: 80px;
 }
-
 .div-buttons {
   display: flex;
   justify-content: flex-end;
 }
-
 .div-buttons>* {
   margin-left: 30px;
 }
+
 
 /* pagina graficos */
 
@@ -325,7 +329,7 @@ canvas {
   height: 100% !important;
 }
 
-/* PAGINA DOS GRÁFICOS 2023 */
+/* Design da NavBar */
 
 .janela {
   display: flex;
@@ -336,6 +340,8 @@ canvas {
   text-decoration: none;
   color: white;
 }
+
+/* Linha da NavBar a Esquerda */ 
 
 .header-left {
   position: fixed;
@@ -348,8 +354,10 @@ canvas {
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  border-right: 3px solid #32b9cd;
-  background-color: #212124;
+  border-right: 3px solid #1919ff;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background-color: #1919ff;
 }
 
 .dash-right {
@@ -384,6 +392,7 @@ canvas {
   font-weight: 800;
 }
 
+
 .btn-nav {
   width: 40%;
   color: white;
@@ -408,21 +417,73 @@ canvas {
   margin: 0;
 }
 
-.btn-nav h3,
+
+/* Botao sair */
+.Btn {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 45px;
+  height: 45px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition-duration: .3s;
+  background-color: #B83C3C;
+
+}
+/* plus sign */
+.sign {
+  width: 100%;
+  transition-duration: .3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sign svg {
+  width: 17px;
+}
+.sign svg path {
+  fill: white;
+}
+/* text */
+.text {
+  position: absolute;
+  right: 0%;
+  width: 0%;
+  opacity: 0;
+  color: white;
+  font-size: 1.2em;
+  font-weight: 600;
+  transition-duration: .3s;
+}
+/* hover effect on button width */
+.Btn:hover {
+  width: 125px;
+  border-radius: 40px;
+  transition-duration: .3s;
+}
+.Btn:hover .sign {
+  width: 30%;
+  transition-duration: .3s;
+  padding-left: 20px;
+}
+/* hover effect button's text */
+.Btn:hover .text {
+  opacity: 1;
+  width: 70%;
+  transition-duration: .3s;
+  padding-right: 5px;
+}
+/* button click effect*/
+.Btn:active {
+  transform: translate(2px, 2px);
+}
+
 .btn-logout h3 {
   margin: 0;
   padding: 0;
 }
 
-.btn-logout {
-  margin: 0;
-  padding: 0;
-  width: 20%;
-  background-color: #32b9cd;
-  color: white;
-  border-radius: 10px;
-  text-align: center;
-  padding: 10px 15px;
-  margin-bottom: 100px;
-  cursor: pointer;
-}
