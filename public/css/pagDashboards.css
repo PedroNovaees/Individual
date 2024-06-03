@@ -1,0 +1,28 @@
+
+h1{
+    color: rgb(255, 248, 187);
+    margin-bottom:3%;
+}
+
+.dash {
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    position: relative;
+    top: 0;
+    left: 20%;
+    background-color: #ca9e94;
+    height: 100vh;
+    overflow: auto;
+  }
+
+
+  .dashbord{
+    background-color: #713874;
+    border-radius: 30px;
+     width: 70%;
+     height: 60%;
+  }
+  

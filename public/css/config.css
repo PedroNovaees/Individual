@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+a {
+  color: inherit;
+  /* Herda a cor do texto do elemento pai */
+  text-decoration: none;
+  /* Remove o sublinhado padrão */
+}
+
+body {
+  color: white;
+  overflow: hidden;
+}
+
+
+
+input {
+  border-radius: 30px;
+  /* Remove qualquer borda padrão */
+  border: 3px solid #db9c8e;
+  outline: none;
+  /* Remove o contorno padrão quando o input está focado */
+  appearance: none;
+  padding: 5px;
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  width: 100%;
+  background-color: #db9c8e;
+}
+
+input::placeholder {
+  color: rgb(100, 100, 100);
+  font-size: large;
+}
+
+.dash-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menino {
+  width: 85vh;
+  height: 85vh;
+}
+
+.img {
+  z-index: 0;
+  position: relative;
+  width: min-content;
+  height: min-content;
+  transform: translateX(16%) translateY(22%);
+}
+
+
+.conteudoh1 {
+  font-size: 6vh;
+  font-weight: 200;
+  transform: translateY(-12vh);
+  
+}
+
+.botao{
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  transform: translateX(15%) translateY(5vh);
+}
+
+
+
+.btn-salvar {
+  border: none;
+  border-radius: 2vh;
+  position: absolute;
+  width: 20vh;
+  padding: 1vh;
+  background-color: #57c45c;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.5s;
+  font-size: x-large;
+  font-weight: 600;
+  
+}
+
+
+.btn-deletar {
+  transform: translateX(-25vh);
+  border: none;
+  border-radius: 2vh;
+  position: absolute;
+  width: 50%;
+  padding: 1vh;
+  background-color: #B83C3C;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.5s;
+  font-size: x-large;
+  font-weight: 600;
+}
+
+.btn-deletar:hover,.btn-salvar:hover{
+  opacity: 0.7;
+}
+
+
+label,
+input {
+  font-size: 4vh;
+  margin-bottom: 5px;
+}
+
+.texto{
+  transform: translateY(-5vh);
+}
+
+
+.conteudo {
+  z-index: 1;
+  transform: translateX(48%) translateY(8vh);
+  background-color: #BF604B;
+  width: 100vh;
+  height: 85vh;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5%;
+}
+

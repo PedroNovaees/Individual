@@ -9,102 +9,93 @@
     <title> SintonizaMente | Configurações </title>
 
     <link rel="stylesheet" href="./../css/dashboards.css">
-    
-    <script src="../js/sessao.js"></script>
-    <script src="./../js/alerta.js"></script>
-
+    <link rel="stylesheet" href="./../css/config.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link
         href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
 </head>
 
-<body onload="validarSessao(), atualizarFeed()" style="background-color: #ddaca1;" >
-
-    <div class="janela">
+<body onload="validarSessao()" style="background-color: #ca9e94;">
 
 
-        <div class="header-left">
 
-          
 
-            <div class="logo"><a href="./cards.html"><img src="../imgs/soundwaves.png" width="190vh" height="50vh"></a></div>
+    <div class="header-left">
 
-            <div class="hello">
-                <h3>Olá, <span id="b_usuario">usuário</span><span>!</span></h3>
-            </div>
 
-            <div class="btn-nav-white">
-                <a href="dashboard.html">
-                    <h4> <img src="../imgs/dashbord.png" width="40vh" class="D">Dashboard</h4>
-                </a>
-            </div>
 
-            <div class="btn-nav-white">
-                <a href="./cards.html">
-                <h4 > <img src="../imgs/questionario.png" width="40vh" class="Q">Questionário</h4>
-                </a>
-            </div>
-
-            <div class="btn-nav">
-                <a href="./mural.html">
-                    <h4> <img src="../imgs/configuracao.png" width="45vh" class="C"> Configurações</h4>
-                </a>
-            </div>
-
-              <button class="botaoLogout" onclick="limparSessao()">
-                <div class="sign">
-                    <svg viewBox="0 0 512 512">
-                        <path
-                            d="M377.9 105.9L500.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L377.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1-128 0c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM160 96L96 96c-17.7 0-32 14.3-32 32l0 256c0 17.7 14.3 32 32 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0c-53 0-96-43-96-96L0 128C0 75 43 32 96 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32z">
-                        </path>
-                    </svg>
-                </div>
-                <div class="text">Sair</div>
-            </button>
-
-         
-
+        <div class="logo"><a href="./cards.html"><img src="../imgs/soundwaves.png" width="190vh" height="50vh"></a>
         </div>
 
-        <div class="dash-right">
-
-
-            <div class="avisos">
-                <div id="alerta">
-                </div>
-                <div class="container">
-                    <h1>Publicar um aviso</h1>
-                    <div class="div-form">
-                        <form id="form_postagem" method="post" onsubmit="return publicar()">
-                            <label>
-                                Título:
-                                <br>
-                                <input name="titulo" id="titulo" maxlength="100" type="text">
-                            </label>
-                            <br>
-                            <br>
-                            <label>
-                                Descrição (máximo de 250 caracteres):
-                                <br>
-                                <textarea name="descricao" id="textarea_descricao" maxlength="250" rows="5"></textarea>
-                            </label>
-                            <br>
-                            <br>
-                            <button>Enviar</button>
-                        </form>
-                    </div>
-                    <h1>Mural de Avisos</h1>
-                    <div class="div-results">
-                        <div id="feed_container" class="feed-container">
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="hello">
+            <h3>Olá, <span id="b_usuario">usuário</span><span>!</span></h3>
         </div>
+
+        <div class="btn-nav-white">
+            <a href="dashboard.html">
+                <h4> <img src="../imgs/dashbord.png" width="40vh" class="D">Dashboard</h4>
+            </a>
+        </div>
+
+        <div class="btn-nav-white">
+            <a href="./cards.html">
+                <h4> <img src="../imgs/questionario.png" width="40vh" class="Q">Questionário</h4>
+            </a>
+        </div>
+
+        <div class="btn-nav">
+            <a href="./mural.html">
+                <h4> <img src="../imgs/configuracao.png" width="45vh" class="C"> Configurações</h4>
+            </a>
+        </div>
+
+        <button class="botaoLogout" onclick="limparSessao()">
+            <div class="sign">
+                <svg viewBox="0 0 512 512">
+                    <path
+                        d="M377.9 105.9L500.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L377.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1-128 0c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM160 96L96 96c-17.7 0-32 14.3-32 32l0 256c0 17.7 14.3 32 32 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0c-53 0-96-43-96-96L0 128C0 75 43 32 96 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32z">
+                    </path>
+                </svg>
+            </div>
+            <div class="text">Sair</div>
+        </button>
+
+
+
     </div>
 
+    <div class="dash-right" style="background-color: #ca9e94;">
 
+        <div class="conteudo">
+            <div class="h1">
+                <h1 class="conteudoh1">Configurações de <b>Usuário</b></h1>
+            </div>
+            <form id="userForm">
+                <div class="texto">
+                    <label for="name">Nome:</label>
+                    <input type="text" id="name" name="name" required><br>
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" required><br>
+                    <label for="password">Senha:</label>
+                    <input type="password" id="password" name="password" required><br>
+                </div>
+                <div class="botao">
+                    <button class='btn-deletar' type="submit" onclick="deletarConta()">Deletar conta</button>
+                    <button class='btn-salvar' type="submit">Salvar</button>
+                </div>
+            </form>
+
+
+        </div>
+
+
+        <div class="img">
+            <img src="../imgs/homi (1).png" class="menino">
+        </div>
+
+
+    </div>
 
 
 </body>
@@ -112,152 +103,34 @@
 </html>
 
 <script>
-    
+
+    function deletarConta() {
+
+        sessionStorage.clear();
+        window.location = "../login.html";
+
+    }
+
     b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
 
-    function limparFormulario() {
-        document.getElementById("form_postagem").reset();
-    }
+    function validarSessao() {
 
-    function publicar() {
-        var idUsuario = sessionStorage.ID_USUARIO;
+        var email = sessionStorage.EMAIL_USUARIO;
+        var nome = sessionStorage.NOME_USUARIO;
 
-        var corpo = {
-            titulo: form_postagem.titulo.value,
-            descricao: form_postagem.descricao.value
+        var b_usuario = document.getElementById("b_usuario");
+
+        if (email != null && nome != null) {
+            b_usuario.innerHTML = nome;
+        } else {
+            window.location = "../login.html";
         }
-
-        fetch(`/avisos/publicar/${idUsuario}`, {
-            method: "post",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(corpo)
-        }).then(function (resposta) {
-
-            console.log("resposta: ", resposta);
-
-            if (resposta.ok) {
-                window.alert("Post realizado com sucesso pelo usuario de ID: " + idUsuario + "!");
-                window.location = "/dashboard/mural.html";
-                limparFormulario();
-                finalizarAguardar();
-            } else if (resposta.status == 404) {
-                window.alert("Deu 404!");
-            } else {
-                throw ("Houve um erro ao tentar realizar a postagem! Código da resposta: " + resposta.status);
-            }
-        }).catch(function (resposta) {
-            console.log(`#ERRO: ${resposta}`);
-            finalizarAguardar();
-        });
-
-        return false;
-
     }
 
-    function editar(idAviso) {
-        sessionStorage.ID_POSTAGEM_EDITANDO = idAviso;
-        console.log("cliquei em editar - " + idAviso);
-        window.alert("Você será redirecionado à página de edição do aviso de id número: " + idAviso);
-        window.location = "/dashboard/edicao-aviso.html"
-
-    }
-
-    function deletar(idAviso) {
-        console.log("Criar função de apagar post escolhido - ID" + idAviso);
-        fetch(`/avisos/deletar/${idAviso}`, {
-            method: "DELETE",
-            headers: {
-                "Content-Type": "application/json"
-            }
-        }).then(function (resposta) {
-
-            if (resposta.ok) {
-                window.alert("Post deletado com sucesso pelo usuario de email: " + sessionStorage.getItem("EMAIL_USUARIO") + "!");
-                window.location = "/dashboard/mural.html"
-            } else if (resposta.status == 404) {
-                window.alert("Deu 404!");
-            } else {
-                throw ("Houve um erro ao tentar realizar a postagem! Código da resposta: " + resposta.status);
-            }
-        }).catch(function (resposta) {
-            console.log(`#ERRO: ${resposta}`);
-        });
-    }
-
-    function atualizarFeed() {
-        fetch("/avisos/listar").then(function (resposta) {
-            if (resposta.ok) {
-                if (resposta.status == 204) {
-                    var feed = document.getElementById("feed_container");
-                    var mensagem = document.createElement("span");
-                    mensagem.innerHTML = "Nenhum resultado encontrado."
-                    feed.appendChild(mensagem);
-                    throw "Nenhum resultado encontrado!!";
-                }
-
-                resposta.json().then(function (resposta) {
-                    console.log("Dados recebidos: ", JSON.stringify(resposta));
-
-                    var feed = document.getElementById("feed_container");
-                    feed.innerHTML = "";
-                    for (let i = 0; i < resposta.length; i++) {
-                        var publicacao = resposta[i];
-
-                        // criando e manipulando elementos do HTML via JavaScript
-                        var divPublicacao = document.createElement("div");
-                        var spanID = document.createElement("span");
-                        var spanTitulo = document.createElement("span");
-                        var spanNome = document.createElement("span");
-                        var divDescricao = document.createElement("div");
-                        var divButtons = document.createElement("div");
-                        var btnEditar = document.createElement("button");
-                        var btnDeletar = document.createElement("button");
-
-
-                        spanID.innerHTML = "ID: <b>" + publicacao.idAviso + "</b>";
-                        spanTitulo.innerHTML = "Título: <b>" + publicacao.titulo + "</b>";
-                        spanNome.innerHTML = "Autor: <b>" + publicacao.nome + "</b>";
-                        divDescricao.innerHTML = "Descrição: <b>" + publicacao.descricao + "</b>";
-                        btnEditar.innerHTML = "Editar";
-                        btnDeletar.innerHTML = "Deletar";
-
-                        divPublicacao.className = "publicacao";
-                        spanTitulo.id = "inputNumero" + publicacao.idAviso;
-                        spanNome.className = "publicacao-nome";
-                        spanTitulo.className = "publicacao-titulo";
-                        divDescricao.className = "publicacao-descricao";
-
-                        divButtons.className = "div-buttons"
-
-                        btnEditar.className = "publicacao-btn-editar"
-                        btnEditar.id = "btnEditar" + publicacao.idAviso;
-                        btnEditar.setAttribute("onclick", `editar(${publicacao.idAviso})`);
-
-                        btnDeletar.className = "publicacao-btn-editar"
-                        btnDeletar.id = "btnDeletar" + publicacao.idAviso;
-                        btnDeletar.setAttribute("onclick", `deletar(${publicacao.idAviso})`);
-
-                        divPublicacao.appendChild(spanID);
-                        divPublicacao.appendChild(spanNome);
-                        divPublicacao.appendChild(spanTitulo);
-                        divPublicacao.appendChild(divDescricao);
-                        divPublicacao.appendChild(divButtons);
-                        divButtons.appendChild(btnEditar);
-                        divButtons.appendChild(btnDeletar);
-                        feed.appendChild(divPublicacao);
-                    }
-
-                   // finalizarAguardar(); 
-                });
-            } else {
-                throw ('Houve um erro na API!');
-            }
-        }).catch(function (resposta) {
-            console.error(resposta);
-          //  finalizarAguardar(); 
-        });
+    
+    function limparSessao() {
+        sessionStorage.clear();
+        window.location = "../login.html";
     }
 
 </script>

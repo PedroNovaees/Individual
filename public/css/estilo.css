@@ -14,7 +14,10 @@ a {
   /* Remove o sublinhado padrão */
 }
 
+html {
+  scroll-behavior: smooth;
 
+}
 
 body {
   font-family: "Poppins", sans-serif;

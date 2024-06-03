@@ -2,126 +2,264 @@
 <html lang="pt-br">
 
 <head>
-    <link rel="shortcut icon" href="../assets/icon/favicon2.ico" type="image/x-icon">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> SintonizaMente | Quiz </title>
-
-    <link rel="stylesheet" href="./../css/dashboards.css">
-    
-
-    <script src="../js/sessao.js"></script>
-    <script src="../js/alerta.js"></script>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
+  <link rel="shortcut icon" href="../imgs/logoaba.png" type="image/x-icon">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> SintonizaMente | Quiz </title>
+  <link rel="stylesheet" href="./../css/cards.css">
+  <link rel="stylesheet" href="./../css/dashboards.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
 </head>
 
-<body onload="validarSessao(), exibirAquarios(),  atualizacaoPeriodica()">
+<body onload="validarSessao()">
 
-    <div class="janela">
+  <div class="janela">
 
-        <div class="header-left dash-header" >
+    <div class="header-left dash-header">
 
-            <div class="logo"><a href="./cards.html"><img src="../imgs/soundwaves.png" width="190vh" height="50vh"></a></div>
+      <div class="logo"><a href="./cards.html"><img src="../imgs/soundwaves.png" width="190vh" height="50vh"></a>
+      </div>
 
-            <div class="hello">
-                <h3>Olá, <span id="b_usuario">usuário</span><span>!</span></h3>
-            </div>
+      <div class="hello">
+        <h3>Olá, <span id="b_usuario">usuário</span><span>!</span></h3>
+      </div>
 
-            <div class="btn-nav-white">
-                <a href="./dashboard.html">
-                    <h4> <img src="../imgs/dashbord.png" width="40vh" class="D">Dashboard</h4>
-                </a>
-            </div>
+      <div class="btn-nav-white">
+        <a href="./dashboard.html">
+          <h4> <img src="../imgs/dashbord.png" width="40vh" class="D">Dashboard</h4>
+        </a>
+      </div>
 
-            <div class="btn-nav">
+      <div class="btn-nav">
 
-                <h4 > <img src="../imgs/questionario.png" width="40vh" class="Q">Questionário</h4>
+        <h4> <img src="../imgs/questionario.png" width="40vh" class="Q">Questionário</h4>
 
-            </div>
+      </div>
 
-            <div class="btn-nav-white">
-                <a href="./mural.html">
-                    <h4> <img src="../imgs/configuracao.png" width="40vh" class="C"> Configurações</h4>
-                </a>
-            </div>
+      <div class="btn-nav-white">
+        <a href="./mural.html">
+          <h4> <img src="../imgs/configuracao.png" width="40vh" class="C"> Configurações</h4>
+        </a>
+      </div>
 
-              <button class="botaoLogout" onclick="limparSessao()">
-                <div class="sign">
-                    <svg viewBox="0 0 512 512">
-                        <path
-                            d="M377.9 105.9L500.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L377.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1-128 0c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM160 96L96 96c-17.7 0-32 14.3-32 32l0 256c0 17.7 14.3 32 32 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0c-53 0-96-43-96-96L0 128C0 75 43 32 96 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32z">
-                        </path>
-                    </svg>
-                </div>
-                <div class="text">Sair</div>
-            </button>
-
+      <button class="botaoLogout" onclick="limparSessao()">
+        <div class="sign">
+          <svg viewBox="0 0 512 512">
+            <path
+              d="M377.9 105.9L500.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L377.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1-128 0c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM160 96L96 96c-17.7 0-32 14.3-32 32l0 256c0 17.7 14.3 32 32 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0c-53 0-96-43-96-96L0 128C0 75 43 32 96 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32z">
+            </path>
+          </svg>
         </div>
-        <div class="dash">
-            <div id="alerta">
-            </div>
-            <div class="area-parametros-alerta">
-                <p class="titulo-legenda">
-                    Legenda - Parâmetros para Alertas
-                </p>
-                <div class="parametros-alerta">
-                    <div class="item-regua perigo-frio">
-                        <p>Perigo</p>
-                        <p>&lt;=5°C</p>
-                    </div>
-                    <div class="item-regua alerta-frio">
-                        <p>Alerta</p>
-                        <p>&lt;=10°C</p>
-                    </div>
-                    <div class="item-regua ideal">
-                        <p>Ideal</p>
-                        <p>20°C</p>
-                    </div>
-                    <div class="item-regua alerta-quente">
-                        <p>Alerta</p>
-                        <p>&gt;=22°C</p>
-                    </div>
-                    <div class="item-regua perigo-quente">
-                        <p>Perigo</p>
-                        <p>&gt;=23°C</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="cards" id="cardAquarios">
-
-            </div>
-
-        </div>
+        <div class="text">Sair</div>
+      </button>
 
     </div>
+
+    <div class="dash">
+
+      <input type="checkbox" class="toggle-checkbox" id="toggle-checkbox">
+      <div class="container">
+        <div class="div1">
+          <div class="texto">
+
+
+            <div class="textoGrande">
+              <span>Descubra o estilo musical <br> <b class="bold" style="color: #B83C3C;">Ideal para você!</b></span>
+            </div>
+            <div class="textoP">
+              <span class="p">Faça já o teste do Sintoniza<b style="color: #BF604B;">Mente</b> e descubra</span>
+              <span class="p">como a musica pode<b style="color: #BF604B;">transformar sua vida </b></span>
+              <span class="p">É rapido, divertido e revelador!</span>
+            </div>
+
+          </div>
+
+          <div class="img">
+
+            <img class="paciente" src="../imgs/paciente (1).png">
+
+          </div>
+
+
+        </div>
+
+        <div class="div2">
+
+
+
+
+
+          <div class="container">
+            <div class="row">
+              <div class="two-thirds column">
+                <h2></h2>
+
+                <div id="progress_bar"></div>
+                <form class="questions_box">
+
+                  <div id="question-1">
+                    <h2> Pergunta 1:</h2><br>
+                    <h3> Quando você está estudando ou trabalhando, que tipo de ambiente você prefere?</h3><br>
+                    <input id="question-1-answer-a" type="radio" name="favelang" value=1>A) Calmo e sem distrações<br>
+                    <input id="question-1-answer-b" type="radio" name="favelang" value=2>B) Um pouco de ruído de
+                    fundo<br>
+                    <div id="submit1" class="button">Enviar Resposta</div>
+                    <div class="clearfix"></div>
+                  </div>
+
+                  <div id="question-2">
+
+
+
+                    <h2> Pergunta 2:</h2><br>
+                    <h3>Você prefere músicas com ou sem letras enquanto estuda ou trabalha?</h3><br>
+                    <input id="question-2-answer-a" type="radio" name="favelang" value="1">A) Sem letras<br>
+                    <input id="question-2-answer-b" type="radio" name="favelang" value="2">B) Com letras<br>
+                    <div id="submit2" class="button">Enviar Resposta</div>
+                    <div class="clearfix"></div>
+                  </div>
+
+
+
+                  <div id="question-3">
+                    <h2>Pergunta 3:</h2><br>
+                    <h3>Quando você precisa se concentrar, você prefere:</h3><br>
+                    <input id="question-3-answer-a" type="radio" name="favelang" value="1"> A) Música instrumental<br>
+                    <input id="question-3-answer-b" type="radio" name="favelang" value="2"> B) Músicas Calmas <br>
+                    <div id="submit3" class="button">Enviar Resposta</div>
+                    <div class="clearfix"></div>
+                  </div>
+
+                  <div id="question-4">
+                    <h2>Pergunta 4:</h2><br>
+                    <h3>Se você está buscando relaxamento ou tratamento para uma condição de saúde, que tipo de música
+                      você
+                      acha mais relaxante?</h3><br>
+                    <input id="question-4-answer-a" type="radio" name="favelang" value="1">A) Sons da natureza ou
+                    instrumentos
+                    suaves<br>
+                    <input id="question-4-answer-b" type="radio" name="favelang" value="2">B) Músicas com uma melodia
+                    contínua e envolvente<br>
+                    <div id="submit4" class="button">Enviar Resposta</div>
+                    <div class="clearfix"></div>
+                  </div>
+
+                  <div id="question-5">
+                    <h2>Pergunta 5:</h2><br>
+                    <h3>Que tipo de sons você acha mais calmantes?</h3><br>
+                    <input id="question-5-answer-a" type="radio" name="favelang" value="1"> A) Som de água corrente ou
+                    chuva<br>
+                    <input id="question-5-answer-b" type="radio" name="favelang" value="2">B) Sons de instrumentos como
+                    harpa
+                    ou piano<br>
+                    <div id="submit5" class="button">Enviar Resposta</div>
+                    <div class="clearfix"></div>
+                  </div>
+
+                  <div id="question-6">
+                    <h2>Pergunta 6:</h2><br>
+                    <h3>Você costuma ouvir música para meditar ou praticar yoga?</h3><br>
+                    <input id="question-6-answer-a" type="radio" name="favelang" value="1">A) Sim<br>
+                    <input id="question-6-answer-b" type="radio" name="favelang" value="2">B) Não<br>
+                    <div id="submit6" class="button">Enviar Resposta</div>
+                    <div class="clearfix"></div>
+                  </div>
+
+                  <div id="question-7">
+                    <h2>Pergunta 7:</h2><br>
+                    <h3>Para atividades físicas ou quando você precisa de um impulso de energia, que tipo de música você
+                      prefere?</h3><br>
+                    <input id="question-7-answer-a" type="radio" name="favelang" value="1"> A) Ritmo rápido e batidas
+                    fortes
+                    <br>
+                    <input id="question-7-answer-b" type="radio" name="favelang" value="2"> B) Melodias animadas e
+                    letras
+                    motivacionais<br>
+                    <div id="submit7" class="button">Enviar Resposta</div>
+                    <div class="clearfix"></div>
+                  </div>
+
+                  <div id="question-8">
+                    <h2>Pergunta 8:</h2><br>
+                    <h3>Você gosta de músicas com letras que você pode cantar junto?</h3><br>
+                    <input id="question-8-answer-a" type="radio" name="favelang" value="1">A) Sim<br>
+                    <input id="question-8-answer-b" type="radio" name="favelang" value="2">B) Não<br>
+                    <div id="submit8" class="button">Enviar Resposta</div>
+                    <div class="clearfix"></div>
+                  </div>
+
+                  <div id="question-9">
+                    <h2>Pergunta 9:</h2><br>
+                    <h3>Quando você está fazendo tarefas diárias, você prefere músicas:</h3><br>
+                    <input id="question-9-answer-a" type="radio" name="favelang" value="1">A) Que ajudam a focar<br>
+                    <input id="question-9-answer-b" type="radio" name="favelang" value="2">B) Que te animam
+                    <div id="submit9" class="button">Enviar Resposta</div>
+                    <div class="clearfix"></div>
+                  </div>
+
+                  <div id="question-10">
+                    <h2>Pergunta 10:</h2>
+                    <h3>Você prefere músicas que:</h3><br>
+                    <input id="question-10-answer-a" type="radio" name="favelang" value="1">A) Ajude a relaxar<br>
+                    <input id="question-10-answer-b" type="radio" name="favelang" value="2">B) Te mantenham ativo e
+                    motivado<br>
+                    <div id="submit10" class="button">Enviar Resposta</div>
+                    <div class="clearfix"></div>
+                  </div>
+
+                  <div id="question-11">
+                    <h2>Obrigado por participar do teste!</h2>
+                    <h3>E o estilo musical que mais combina com você é: </h3>
+                    <h1 id=printtotalscore class="textoResultado"></h1>
+
+
+                  </div>
+
+
+
+                </form>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <label for="toggle-checkbox" class="toggle-btn">Realizar Teste</label>
+      </div>
+
+      <script src="../js/cards.js"></script>
+
+    </div>
+
+  </div>
 
 </body>
 
 <script>
+  b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
 
-    function exibirAquarios() {
-        JSON.parse(sessionStorage.AQUARIOS).forEach(item => {
-            document.getElementById("cardAquarios").innerHTML += `
-                    <div class="card-aquario">
-                        <div class="title-aquario">
-                            <h1>${item.descricao}</h1>
-                        </div>
-                        <div class="desc-aquario">
-                        <div class="temperatura">
-                            <p id="temp_aquario_${item.id}">-°C</p>
-                        </div>
-                        <div class="cor-alerta" id="card_${item.id}"></div>
-                    </div>
-                    </div>
-                    `
-        });
+  function validarSessao() {
+    var email = sessionStorage.EMAIL_USUARIO;
+    var nome = sessionStorage.NOME_USUARIO;
+
+    var b_usuario = document.getElementById("b_usuario");
+
+    if (email != null && nome != null) {
+        b_usuario.innerHTML = nome;
+    } else {
+        window.location = "../login.html";
     }
+}
 
-</script>
+  function limparSessao() {
+    sessionStorage.clear();
+    window.location = "../login.html";
+}
+
+</script> 
 
 </html>

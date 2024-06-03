@@ -24,7 +24,6 @@ CREATE TABLE usuario (
 CREATE TABLE teste (
     id INT PRIMARY KEY AUTO_INCREMENT,
     estilo VARCHAR(45),
-    qtdPergunta VARCHAR(255)
 );
 
 CREATE TABLE realiza (
@@ -32,7 +31,6 @@ CREATE TABLE realiza (
     fkUsuario INT, FOREIGN KEY (fkUsuario) REFERENCES usuario(id),
     fkTeste INT,FOREIGN KEY (fkTeste) REFERENCES teste(id),
     qtdRealizada INT,
-    dtRealizada DATETIME,
     UNIQUE KEY unique_realiza (fkUsuario, fkTeste) -- Restrição Unique para as chaves estrangeiras.
 );
 

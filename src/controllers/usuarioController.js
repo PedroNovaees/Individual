@@ -1,4 +1,6 @@
 var usuarioModel = require("../models/usuarioModel");
+
+
 // var aquarioModel = require("../models/aquarioModel");
 
 function autenticar(req, res) {
@@ -83,7 +85,63 @@ function cadastrar(req, res) {
     }
 }
 
+
+const userController = {
+    getUserByEmail: (req, res) => {
+        const {
+            email
+        } = req.body;
+
+        userModel.getUserIdByEmail(email, (err, userId) => {
+            if (err) {
+                return res.status(500).send('Erro ao buscar usuário');
+            }
+            if (!userId) {
+                return res.status(404).send('Usuário não encontrado');
+            }
+
+            userModel.getUser(userId, (err, user) => {
+                if (err) {
+                    return res.status(500).send('Erro ao buscar usuário');
+                }
+                res.json(user);
+            });
+        });
+    },
+    updateUser: (req, res) => {
+        const {
+            nome,
+            email,
+            senha
+        } = req.body;
+
+        userModel.getUserIdByEmail(email, (err, userId) => {
+            if (err) {
+                return res.status(500).send('Erro ao buscar usuário');
+            }
+            if (!userId) {
+                return res.status(404).send('Usuário não encontrado');
+            }
+
+            userModel.updateUser(userId, {
+                nome,
+                email,
+                senha
+            }, (err) => {
+                if (err) {
+                    return res.status(500).send('Erro ao atualizar usuário');
+                }
+                res.send('Dados do usuário atualizados com sucesso');
+            });
+        });
+    }
+};
+
+
+
+
 module.exports = {
     autenticar,
-    cadastrar
-}
+    cadastrar,
+    userController
+};
