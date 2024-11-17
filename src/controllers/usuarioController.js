@@ -143,5 +143,6 @@ const userController = {
 module.exports = {
     autenticar,
     cadastrar,
-    userController
+    getUserByEmail,   // Exporte a função diretamente aqui
+    updateUser         // E a outra função também
 };
