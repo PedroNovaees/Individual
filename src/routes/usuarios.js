@@ -12,7 +12,7 @@ router.post("/autenticar", function (req, res) {
     usuarioController.autenticar(req, res);
 });
 
-router.get('/user', userController.getUserByEmail);
+router.get('/user', usuarioController.getUserByEmail);
 router.put('/user', express.json(), userController.updateUser);
 
 module.exports = router;
